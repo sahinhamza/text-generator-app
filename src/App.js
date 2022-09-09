@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Output } from "./components/output";
+import { Select } from "./components/select";
+import { Text } from "./components/text";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container">
+      <h1>React sample text generator app</h1>
+      <hr />
+      <form className="form-inline">
+        <div className="form-group">
+          <label>Paragraphs</label>
+          <Text />
+        </div>
+        <div className="form-group">
+          <label>Include HTML</label>
+          <Select />
+        </div>
+
+      </form>
+      <Output />
     </div>
   );
 }
